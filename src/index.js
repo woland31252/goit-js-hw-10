@@ -22,7 +22,7 @@ function serchCoutry(e) {
   fetchCountries(inputValue)
     .then(country => markupSelectionCountries(country))
     .catch(onFetchError);
-}
+};
 
 function markupSelectionCountries(data) {
   console.log(data);
@@ -33,15 +33,15 @@ function markupSelectionCountries(data) {
   } else {
     onFetchInfo();
   }
-}
+};
 
 function onFetchInfo() {
   Notify.info('Too many matches found. Please enter a more specific name.');
-}
+};
 
 function onFetchError() {
   Notify.failure('Oops, there is no country with that name');
-}
+};
 
 function createMarkupCountryInfo(arr) {
   const markup = arr
@@ -60,7 +60,7 @@ function createMarkupCountryInfo(arr) {
     .join('');
 
   countryInfo.innerHTML = markup;
-}
+};
 
 function createMarkupCountries(arr) {
   const markup = arr
@@ -73,4 +73,4 @@ function createMarkupCountries(arr) {
     .join('');
 
   countryList.innerHTML = markup;
-}
+};
